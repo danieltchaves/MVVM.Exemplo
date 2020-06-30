@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
 
-namespace MVVM.Exemplo.ViewModels
+namespace MVVM.Exemplo.ViewModels.Base
 {
     public abstract class BaseViewModel : INotifyPropertyChanged
     {

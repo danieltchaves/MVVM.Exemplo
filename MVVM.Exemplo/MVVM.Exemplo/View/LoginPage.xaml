@@ -5,10 +5,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewModel="clr-namespace:MVVM.Exemplo.ViewModels"
              mc:Ignorable="d"
-             x:Class="MVVM.Exemplo.View.BindingModePage">
+             x:Class="MVVM.Exemplo.View.LoginPage"
+             Title="Login">
 
     <ContentPage.BindingContext>
-        <viewModel:BindingModeViewModel/>
+        <viewModel:LoginViewModel/>
     </ContentPage.BindingContext>
 
     <ContentPage.Content>

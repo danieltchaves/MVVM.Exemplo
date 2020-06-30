@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using MVVM.Exemplo.ViewModels.Base;
+using MVVM.Exemplo.ViewModels.Interfaces;
 using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace MVVM.Exemplo.ViewModels
 {
-    public class BindingModeViewModel : BaseViewModel
+    public class LoginViewModel : BaseViewModel, ILoginViewModel
     {
         private string _nome;
         public string Nome
@@ -56,7 +55,7 @@ namespace MVVM.Exemplo.ViewModels
             }
         }
 
-        public BindingModeViewModel()
+        public LoginViewModel()
         {
             Nome = "Daniel";
             SobreNome = "Teixeira";
