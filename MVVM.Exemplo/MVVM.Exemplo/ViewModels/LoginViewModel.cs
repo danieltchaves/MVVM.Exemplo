@@ -1,4 +1,5 @@
-﻿using MVVM.Exemplo.ViewModels.Base;
+﻿using MVVM.Exemplo.View.Interfaces;
+using MVVM.Exemplo.ViewModels.Base;
 using MVVM.Exemplo.ViewModels.Interfaces;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -7,58 +8,42 @@ namespace MVVM.Exemplo.ViewModels
 {
     public class LoginViewModel : BaseViewModel, ILoginViewModel
     {
-        private string _nome;
-        public string Nome
+        private string _usuario;
+        public string Usuario
         {
-            get { return _nome; }
+            get { return _usuario; }
             set
             {
-                _nome = value;
-                NotifyPropertyChanged();
-            }
-        }
-        private string _sobreNome;
-        public string SobreNome
-        {
-            get { return _sobreNome; }
-            set
-            {
-                _sobreNome = value;
+                _usuario = value;
                 NotifyPropertyChanged();
             }
         }
 
-        private string _endereco;
-        public string Endereco
+        private string _senha;
+        public string Senha
         {
-            get { return _endereco; }
+            get { return _senha; }
             set
             {
-                _endereco = value;
+                _senha = value;
                 NotifyPropertyChanged();
             }
         }
 
-        private ICommand _limparCommand;
-        public ICommand LimparCommand
+        private ICommand _entrarCommand;
+        public ICommand EntrarCommand
         {
             get
             {
-                return _limparCommand ?? new Command(() =>
-               {
-                   Endereco = string.Empty;
+                return _entrarCommand ?? new Command(() =>
+               { 
+                   Navigation.PushAsync<IMainViewModel, IMainPage>();
                });
             }
             set
             {
-                _limparCommand = value;
+                _entrarCommand = value;
             }
-        }
-
-        public LoginViewModel()
-        {
-            Nome = "Daniel";
-            SobreNome = "Teixeira";
         }
     }
 }

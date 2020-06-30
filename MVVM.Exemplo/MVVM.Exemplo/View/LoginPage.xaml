@@ -3,52 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:viewModel="clr-namespace:MVVM.Exemplo.ViewModels"
              mc:Ignorable="d"
              x:Class="MVVM.Exemplo.View.LoginPage"
              Title="Login">
 
-    <ContentPage.BindingContext>
-        <viewModel:LoginViewModel/>
-    </ContentPage.BindingContext>
-
     <ContentPage.Content>
-      <StackLayout Padding="10">
-          
-          <!--View -> ViewModel-->
-            <Entry Text="{Binding Nome, Mode=OneWayToSource}" />
-            <Entry Text="{Binding SobreNome, Mode=OneWayToSource}" x:Name="Entry"/>
-          
-          <!--ViewModel -> View-->
-            <Label>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="{Binding Nome, Mode=OneWay}" />
-                        <Span Text=" " />
-                        <Span Text="{Binding SobreNome, Mode=OneWay}"/>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-          
-          <!--View -> View-->
-            <Label Text="{Binding Source={x:Reference Entry}, Mode=OneWay, Path=Text}"/>
-          
-          <!--View -> ViewModel
-          Viewl Model -> View-->
-            <Entry Text="{Binding Endereco, Mode=TwoWay}"/>
-            <Label Text="{Binding Endereco}"/>
-            <Button Command="{Binding LimparCommand}"/>
-          
+        <StackLayout 
+            Padding="20" 
+            VerticalOptions="CenterAndExpand">
+
+            <Image Source="icon.png"/>
+
+            <Entry 
+                Text="{Binding Usuario, Mode=OneWayToSource}" 
+                Placeholder="Login"/>
+            <Entry 
+                Text="{Binding Senha, Mode=OneWayToSource}" 
+                Placeholder="Senha"/>
+
+            <Button 
+                Text="Entrar" 
+                Command="{Binding EntrarCommand}"/>
+
         </StackLayout>
-  </ContentPage.Content>
+    </ContentPage.Content>
 </ContentPage>
-
-
-<!--<Label>
-    <Label.Text>
-        <MultiBinding StringFormat="{}{0} {1}">
-            <Binding Path="Nome" Mode="OneWay"/>
-            <Binding Path="SobreNome" Mode="OneWay"/>
-        </MultiBinding>
-    </Label.Text>
-</Label>-->

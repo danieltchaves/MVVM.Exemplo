@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using MVVM.Exemplo.Interfaces;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Text;
+using Xamarin.Forms;
 
 namespace MVVM.Exemplo.ViewModels.Base
 {
     public abstract class BaseViewModel : INotifyPropertyChanged
     {
+        public INavigationService Navigation = App.AutofacIoC.Resolve<INavigationService>();
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void NotifyPropertyChanged([CallerMemberName] string propertyName = null)

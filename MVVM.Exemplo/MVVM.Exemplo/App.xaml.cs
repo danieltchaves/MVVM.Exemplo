@@ -20,7 +20,7 @@ namespace MVVM.Exemplo
 
             RegisterType();
 
-            var navigation = AutofacIoC.Resolve<Interfaces.INavigation>();
+            var navigation = AutofacIoC.Resolve<INavigationService>();
             navigation.PushMain<ILoginViewModel, ILoginPage>();
         }
 
@@ -28,7 +28,9 @@ namespace MVVM.Exemplo
         {
             AutofacIoC.RegisterType<LoginPage, ILoginPage>();
             AutofacIoC.RegisterType<LoginViewModel, ILoginViewModel>();
-            AutofacIoC.RegisterType<Navigation, Interfaces.INavigation>();
+            AutofacIoC.RegisterType<MainPage, IMainPage>();
+            AutofacIoC.RegisterType<MainViewModel, IMainViewModel>();
+            AutofacIoC.RegisterType<NavigationService, INavigationService>();
             AutofacIoC.Build();
         }
 

@@ -3,10 +3,10 @@ using System.Threading.Tasks;
 
 namespace MVVM.Exemplo.Interfaces
 {
-    public interface INavigation
+    public interface INavigationService
     {
-        void PushMain<ViewModel, View>();
-        Task PushAsync<ViewModel, View>(); 
+        void PushMain<IViewModel, IView>();
+        Task PushAsync<IViewModel, IView>(); 
         Task PopAsync();
         Task PopToRootAsync();
     }
