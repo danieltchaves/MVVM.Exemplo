@@ -10,7 +10,7 @@ namespace MVVM.Exemplo.View
         public LoginPage()
         {
             InitializeComponent();
-            NavigationPage.SetHasNavigationBar(this, false);
+            //NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }

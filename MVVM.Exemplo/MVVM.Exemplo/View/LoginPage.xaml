@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="MVVM.Exemplo.View.LoginPage"
-             Title="Login">
+             Title="{Binding Titulo, Mode=OneWay}">
 
     <ContentPage.Content>
         <StackLayout 
@@ -32,3 +32,5 @@
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
+    
+    

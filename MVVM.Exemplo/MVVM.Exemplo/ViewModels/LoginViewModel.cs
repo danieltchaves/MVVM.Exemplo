@@ -8,27 +8,19 @@ namespace MVVM.Exemplo.ViewModels
 {
     public class LoginViewModel : BaseViewModel, ILoginViewModel
     {
-        private string _usuario;
-        public string Usuario
+        private string _titulo;
+        public string Titulo
         {
-            get { return _usuario; }
+            get { return _titulo; }
             set
             {
-                _usuario = value;
+                _titulo = value;
                 NotifyPropertyChanged();
             }
         }
 
-        private string _senha;
-        public string Senha
-        {
-            get { return _senha; }
-            set
-            {
-                _senha = value;
-                NotifyPropertyChanged();
-            }
-        }
+        public string Usuario { get; set; }
+        public string Senha { get; set; }
 
         private ICommand _entrarCommand;
         public ICommand EntrarCommand
@@ -36,10 +28,14 @@ namespace MVVM.Exemplo.ViewModels
             get
             {
                 return _entrarCommand ?? (_entrarCommand = new Command(() =>
-               { 
+               {
                    Navigation.PushAsync<IMainViewModel, IMainPage>();
                }));
             }
+        }
+        public LoginViewModel()
+        {
+            Titulo = "Login";
         }
 
         private ICommand _registrarCommand;
