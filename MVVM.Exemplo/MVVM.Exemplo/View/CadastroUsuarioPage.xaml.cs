@@ -5,12 +5,11 @@ using Xamarin.Forms.Xaml;
 namespace MVVM.Exemplo.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginPage : ContentPage, ILoginPage
+    public partial class CadastroUsuarioPage : ContentPage, ICadastroUsuarioPage
     {
-        public LoginPage()
+        public CadastroUsuarioPage()
         {
             InitializeComponent();
-            NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }

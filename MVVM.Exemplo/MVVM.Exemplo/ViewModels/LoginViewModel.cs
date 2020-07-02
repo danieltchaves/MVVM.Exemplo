@@ -35,14 +35,22 @@ namespace MVVM.Exemplo.ViewModels
         {
             get
             {
-                return _entrarCommand ?? new Command(() =>
+                return _entrarCommand ?? (_entrarCommand = new Command(() =>
                { 
                    Navigation.PushAsync<IMainViewModel, IMainPage>();
-               });
+               }));
             }
-            set
+        }
+
+        private ICommand _registrarCommand;
+        public ICommand RegistrarCommand
+        {
+            get
             {
-                _entrarCommand = value;
+                return _registrarCommand ?? (_registrarCommand = new Command(() =>
+                {
+                    Navigation.PushAsync<ICadastroUsuarioViewModel, ICadastroUsuarioPage>();
+                }));
             }
         }
     }
