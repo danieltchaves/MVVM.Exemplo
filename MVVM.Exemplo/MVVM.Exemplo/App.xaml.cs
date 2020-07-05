@@ -28,11 +28,9 @@ namespace MVVM.Exemplo
         {
             AutofacIoC.RegisterType<LoginPage, ILoginPage>();
             AutofacIoC.RegisterType<LoginViewModel, ILoginViewModel>();
-            AutofacIoC.RegisterType<CadastroUsuarioPage, ICadastroUsuarioPage>();
-            AutofacIoC.RegisterType<CadastroUsuarioViewModel, ICadastroUsuarioViewModel>();
             AutofacIoC.RegisterType<MainPage, IMainPage>();
             AutofacIoC.RegisterType<MainViewModel, IMainViewModel>();
-            AutofacIoC.RegisterType<NavigationService, INavigationService>();
+            AutofacIoC.RegisterType<Navigation, INavigationService>();
             AutofacIoC.Build();
         }
 

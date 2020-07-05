@@ -37,17 +37,5 @@ namespace MVVM.Exemplo.ViewModels
         {
             Titulo = "Login";
         }
-
-        private ICommand _registrarCommand;
-        public ICommand RegistrarCommand
-        {
-            get
-            {
-                return _registrarCommand ?? (_registrarCommand = new Command(() =>
-                {
-                    Navigation.PushAsync<ICadastroUsuarioViewModel, ICadastroUsuarioPage>();
-                }));
-            }
-        }
     }
 }

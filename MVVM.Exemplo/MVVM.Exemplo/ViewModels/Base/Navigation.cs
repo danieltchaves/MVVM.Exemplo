@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace MVVM.Exemplo.ViewModels
 {
-    public class NavigationService : Exemplo.Interfaces.INavigationService
+    public class Navigation : Exemplo.Interfaces.INavigationService
     {
         public void PushMain<IViewModel, IView>()
         {

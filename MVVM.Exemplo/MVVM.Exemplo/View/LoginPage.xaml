@@ -25,10 +25,6 @@
                 Text="Entrar" 
                 Command="{Binding EntrarCommand}"/>
 
-            <Button 
-                Text="Registrar" 
-                Command="{Binding RegistrarCommand}"/>
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
