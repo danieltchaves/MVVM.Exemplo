@@ -30,7 +30,7 @@ namespace MVVM.Exemplo
             AutofacIoC.RegisterType<LoginViewModel, ILoginViewModel>();
             AutofacIoC.RegisterType<MainPage, IMainPage>();
             AutofacIoC.RegisterType<MainViewModel, IMainViewModel>();
-            AutofacIoC.RegisterType<Navigation, INavigationService>();
+            AutofacIoC.RegisterType<NavigationService, INavigationService>();
             AutofacIoC.Build();
         }
 

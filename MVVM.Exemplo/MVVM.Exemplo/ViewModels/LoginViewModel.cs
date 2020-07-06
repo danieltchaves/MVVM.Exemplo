@@ -1,4 +1,5 @@
-﻿using MVVM.Exemplo.View.Interfaces;
+﻿using MVVM.Exemplo.Interfaces;
+using MVVM.Exemplo.View.Interfaces;
 using MVVM.Exemplo.ViewModels.Base;
 using MVVM.Exemplo.ViewModels.Interfaces;
 using System.Windows.Input;
@@ -29,12 +30,16 @@ namespace MVVM.Exemplo.ViewModels
             {
                 return _entrarCommand ?? (_entrarCommand = new Command(() =>
                {
-                   Navigation.PushAsync<IMainViewModel, IMainPage>();
+                   _navigationService.PushAsync<IMainViewModel, IMainPage>();
                }));
             }
         }
-        public LoginViewModel()
+
+        private readonly INavigationService _navigationService;
+
+        public LoginViewModel(INavigationService navigationService)
         {
+            _navigationService = navigationService;
             Titulo = "Login";
         }
     }
