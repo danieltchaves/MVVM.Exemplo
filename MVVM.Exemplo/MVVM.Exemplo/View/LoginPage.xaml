@@ -21,7 +21,7 @@
                 Text="{Binding Senha, Mode=OneWayToSource}" 
                 Placeholder="Senha"/>
 
-            <Button 
+            <Button
                 Text="Entrar" 
                 Command="{Binding EntrarCommand}"/>
 
