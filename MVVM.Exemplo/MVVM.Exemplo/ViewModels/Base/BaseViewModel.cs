@@ -1,7 +1,5 @@
-﻿using MVVM.Exemplo.Interfaces;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using Xamarin.Forms;
 
 namespace MVVM.Exemplo.ViewModels.Base
 {

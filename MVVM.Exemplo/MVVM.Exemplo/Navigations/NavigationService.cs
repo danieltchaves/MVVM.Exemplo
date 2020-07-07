@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace MVVM.Exemplo.ViewModels
+namespace MVVM.Exemplo.Navigations
 {
-    public class NavigationService : Exemplo.Interfaces.INavigationService
+    public class NavigationService : Interfaces.INavigationService
     {
         public void PushMain<IViewModel, IView>()
         {

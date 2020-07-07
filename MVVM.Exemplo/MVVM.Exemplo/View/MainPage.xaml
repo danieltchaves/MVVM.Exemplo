@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:be="clr-namespace:MVVM.Exemplo.Behaviors"
              mc:Ignorable="d"
              x:Class="MVVM.Exemplo.View.MainPage"
              Title="Main">
@@ -11,6 +12,18 @@
             <Label Text="Welcome to Xamarin.Forms!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <ListView>
+                <ListView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Teste 1</x:String>
+                        <x:String>Teste 2</x:String>
+                        <x:String>Teste 3</x:String>
+                    </x:Array>
+                </ListView.ItemsSource>
+                <ListView.Behaviors>
+                    <be:EventToCommandBehavior EventName="ItemTapped" Command="{Binding TapCommand}"/>
+                </ListView.Behaviors>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

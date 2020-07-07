@@ -1,5 +1,6 @@
 ﻿using MVVM.Exemplo.Interfaces;
 using MVVM.Exemplo.Ioc;
+using MVVM.Exemplo.Navigations;
 using MVVM.Exemplo.View;
 using MVVM.Exemplo.View.Interfaces;
 using MVVM.Exemplo.ViewModels;
@@ -26,7 +27,9 @@ namespace MVVM.Exemplo
 
         private static void RegisterType()
         {
-            AutofacIoC.RegisterType<LoginPage, ILoginPage>();
+            if (Device.Idiom == TargetIdiom.Tablet) AutofacIoC.RegisterType<LoginTabletPage, ILoginPage>();
+            else AutofacIoC.RegisterType<LoginPage, ILoginPage>();
+
             AutofacIoC.RegisterType<LoginViewModel, ILoginViewModel>();
             AutofacIoC.RegisterType<MainPage, IMainPage>();
             AutofacIoC.RegisterType<MainViewModel, IMainViewModel>();
