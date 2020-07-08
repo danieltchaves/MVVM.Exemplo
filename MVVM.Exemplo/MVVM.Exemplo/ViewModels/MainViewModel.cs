@@ -24,18 +24,6 @@ namespace MVVM.Exemplo.ViewModels
             }
         }
 
-        private ICommand _tapCommand;
-        public ICommand TapCommand
-        {
-            get
-            {
-                return _tapCommand ?? (_tapCommand = new Command(() =>
-                {
-
-                }));
-            }
-        }
-
         public MainViewModel()
         {
             Usuarios = new ObservableCollection<Usuario>();
