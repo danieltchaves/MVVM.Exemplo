@@ -1,7 +1,6 @@
 ﻿using MVVM.Exemplo.Models;
 using MVVM.Exemplo.ViewModels.Base;
 using MVVM.Exemplo.ViewModels.Interfaces;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Xamarin.Forms;
