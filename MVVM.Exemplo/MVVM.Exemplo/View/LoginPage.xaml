@@ -19,7 +19,8 @@
                 Placeholder="Login"/>
             <Entry 
                 Text="{Binding Senha, Mode=OneWayToSource}" 
-                Placeholder="Senha"/>
+                Placeholder="Senha"
+                IsPassword="True"/>
 
             <Button
                 Text="Entrar" 

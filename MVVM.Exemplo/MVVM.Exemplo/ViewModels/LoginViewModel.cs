@@ -1,4 +1,5 @@
 ﻿using MVVM.Exemplo.Interfaces;
+using MVVM.Exemplo.View;
 using MVVM.Exemplo.View.Interfaces;
 using MVVM.Exemplo.ViewModels.Base;
 using MVVM.Exemplo.ViewModels.Interfaces;
