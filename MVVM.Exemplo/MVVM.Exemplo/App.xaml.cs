@@ -5,9 +5,7 @@ using MVVM.Exemplo.View;
 using MVVM.Exemplo.View.Interfaces;
 using MVVM.Exemplo.ViewModels;
 using MVVM.Exemplo.ViewModels.Interfaces;
-using System;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace MVVM.Exemplo
 {
@@ -27,9 +25,7 @@ namespace MVVM.Exemplo
 
         private static void RegisterType()
         {
-            if (Device.Idiom == TargetIdiom.Tablet) AutofacIoC.RegisterType<LoginTabletPage, ILoginPage>();
-            else AutofacIoC.RegisterType<LoginPage, ILoginPage>();
-
+            AutofacIoC.RegisterType<LoginPage, ILoginPage>();
             AutofacIoC.RegisterType<LoginViewModel, ILoginViewModel>();
             AutofacIoC.RegisterType<MainPage, IMainPage>();
             AutofacIoC.RegisterType<MainViewModel, IMainViewModel>();
