@@ -1,5 +1,4 @@
 ﻿using MVVM.Exemplo.Models;
-using MVVM.Exemplo.ViewModels.Base;
 using MVVM.Exemplo.ViewModels.Interfaces;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
